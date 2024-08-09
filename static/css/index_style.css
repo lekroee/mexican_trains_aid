@@ -1,0 +1,37 @@
+/* Orange #e0410e
+Brown #5F2C06
+Golden #FFBA4B
+Light Golden #ffe5ba
+Brick Red #C23307 */
+
+/* flex styles */
+.cheater-box {
+    color: #5F2C06;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    font-size: 2em;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    border: 2px solid #5F2C06;
+    background: #C23307;
+    color: #FFBA4B;
+    font-size: 2em;
+}
+
+a:hover {
+    background: #ffe5ba;
+    color: #5F2C06;
+}
+

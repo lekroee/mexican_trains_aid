@@ -1,0 +1,46 @@
+/* Orange #e0410e
+Brown #5F2C06
+Golden #FFBA4B
+Light Golden #ffe5ba
+Brick Red #C23307 */
+
+/* flex styles */
+.photo-submit-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Georgia', serif;
+}
+
+h2.explanation-text {
+    max-width: 600px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+    color: #5F2C06;
+
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid #FFBA4B;
+    padding: 10px;
+    color: #5F2C06;
+    font-size: 2em;
+}
+
+#submit {
+    background: #C23307;
+    color: #FFBA4B;
+    font-size: 1em;
+}
+
+
+#photo {
+    font-size: .8em;
+}
+

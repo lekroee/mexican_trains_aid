@@ -1,0 +1,113 @@
+/* Orange #e0410e
+Brown #5F2C06
+Golden #FFBA4B
+Light Golden #ffe5ba
+Brick Red #C23307 */
+
+.user-review
+{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    color: #5F2C06;
+    font-family: 'Georgia', serif;
+}
+
+.raw-dominoes-explanation
+{
+    max-width: 600px;
+    text-align: center;
+}
+
+[class^="domino-data-"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #FFBA4B;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+input[type="number"]
+{
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.rootlbl
+{
+    font-size: 1.2em;
+}
+
+#user-form
+{
+    align-items: center;
+}
+
+.submit, .add-domino
+{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #C23307;
+    color: #FFBA4B;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/*
+.raw-dominoes-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Georgia', serif;
+    color: #5F2C06;
+}
+
+.raw-dominoes-explanation {
+    max-width: 600px;
+    text-align: center;
+}
+
+.raw-dominoes-text-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.domino-photos {
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #5F2C06;
+}
+
+@for $i from 0 through 13 {
+    .domino-photo-#{$i} {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+}
+
+.submit {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #C23307;
+    color: #FFBA4B;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+*/
+

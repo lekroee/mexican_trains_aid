@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mexican Trains Mischief{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base_style.css') }}">
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <h1 class="header-banner">MEXICAN TRAINS HELPER</h1>
+        </div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

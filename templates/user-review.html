@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}User Review - Mexican Trains Mischief{% endblock%}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/user-review_style.css') }}">
+{% endblock %}
+{% block content %}
+<div class="user-review">
+    <div class="raw-dominoes-explanation-box">
+        <h2 class="raw-dominoes-explanation">
+            Below is the data for the dominoes extracted from the image you uploaded.
+            Please edit this to match the real dominoes you have.
+            <br>
+            Note that refreshing the page will clear any dominoes you've added but retain any other data you've entered.
+            <br>
+            Use the photos of the dominoes and their matching IDs to edit the data.
+        </h2>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data" id="user-form">
+        {% for dominoImg in dominoImgs %}
+            <div class="domino-data-{{ loop.index0 + 1 }}">
+                <h3>Domino {{ loop.index0 + 1 }}</h3>
+
+                <img src="{{ url_for('static', filename='images/' + dominoImg) }}">
+                <div name="domino{{ loop.index0 + 1 }}">
+                    <input type="number" name="domino-{{ loop.index0 + 1 }}-top" min="0" max="12" required
+                           value="{{ domsFromImg[loop.index0 + 1].split(',')[0].strip() }}">
+                    <input type="number" name="domino-{{ loop.index0 + 1 }}-bottom" min="0" max="12" required
+                           value="{{ domsFromImg[loop.index0 + 1].split(',')[1].strip() }}">
+                </div>
+            </div>
+        {% endfor %}
+        <!-- Placeholder for new dominoes added dynamically -->
+        <div id="new-dominoes"></div>
+
+
+        <div class="root">
+            <label for="root" class="rootlbl">Enter round number:</label>
+            <input type="number" id="root" name="round" min="0" max="12" required>
+        </div>
+
+        <div class="controls">
+            <button type="button" id="add-domino-btn" class="add-domino">Add Domino</button>
+            <button type="submit" class="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    let dominoCounter = {{ dominoImgs|length }}; // Start counting from the number of existing dominoes
+    const addDominoBtn = document.getElementById('add-domino-btn');
+    const newDominoesContainer = document.getElementById('new-dominoes');
+
+    addDominoBtn.addEventListener('click', function() {
+        dominoCounter++; // Increment the domino counter
+
+        // Create a new div element to hold the new domino inputs
+        const newDominoDiv = document.createElement('div');
+        newDominoDiv.className = 'domino-data-' + dominoCounter;
+
+        // Create the inner HTML for the new domino
+        newDominoDiv.innerHTML = `
+            <p>Domino ${dominoCounter}</p>
+            <div name="domino${dominoCounter}">
+                <input type="number" name="domino-${dominoCounter}-top" min="0" max="12" required value="0">
+                <input type="number" name="domino-${dominoCounter}-bottom" min="0" max="12" required value="0">
+            </div>
+        `;
+
+        // Append the new div to the container
+        newDominoesContainer.appendChild(newDominoDiv);
+    });
+</script>
+{% endblock %}

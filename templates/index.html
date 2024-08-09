@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}Home - Mexican Trains Mischief{% endblock%}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}">
+{% endblock %}
+{% block content %}
+<div class="cheater-box">
+    <div class="cheater-text">
+        <h2 class="header-cheater-text">By continuing, you accept to being called a "cheater, cheater, pumpkin eater".</h2>
+    </div>
+    <div class="cheater-agree">
+        <li><a href="{{url_for('photo_submit')}}">I accept</a></li>
+    </div>
+
+</div>
+{% endblock %}

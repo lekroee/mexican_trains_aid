@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}Photo Submit - Mexican Trains Mischief{% endblock%}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/photo-submit_style.css') }}">
+{% endblock %}
+{% block content %}
+<div class="photo-submit-box">
+    <div class="explanation-box">
+        <h2 class="explanation-text">Take a well-lit, overhead photo of the dominoes you have for the round.
+            Once you have the photo, upload and submit it here.
+            <br>
+            <br>
+            Tips: Spread dominoes out by half an inch and reduce glare as much as possible. You could even set up
+            the dominoes in a 4x3 grid fashion to ensure quality.
+            <br>
+            <br>
+            Don't worry if we don't pick up all the dominoes and their pips, we'll let you correct what you see.
+        </h2>
+
+    </div>
+
+    <div class="upload-box">
+        <p>Only jpgs allowed for now.</p>
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="photo">
+                {{ form.photo() }}
+            </div>
+
+            <div class="submit">
+                {{ form.submit() }}
+            </div>
+        </form>
+
+    </div>
+
+</div>
+{% endblock %}

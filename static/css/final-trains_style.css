@@ -1,0 +1,63 @@
+/* Orange #e0410e
+Brown #5F2C06
+Golden #FFBA4B
+Light Golden #ffe5ba
+Brick Red #C23307 */
+
+.final-trains {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #5F2C06;
+    font-family: 'Georgia', serif;
+}
+
+.results-box {
+    font-size: 2em;
+    max-width: 600px;
+}
+
+.results {
+    font-family: 'Georgia', serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+}
+
+.controls-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.restart {
+    margin: 0 10px;
+}
+
+.modify {
+    margin: 0 10px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    font-family: 'Georgia', serif;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    border: 2px solid #5F2C06;
+    background: #C23307;
+    color: #FFBA4B;
+}
+
+a:hover {
+    background: #ffe5ba;
+    color: #5F2C06;
+}

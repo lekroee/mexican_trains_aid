@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}Final Trains - Mexican Trains Mischief{% endblock%}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/final-trains_style.css') }}">
+{% endblock %}
+{% block content %}
+<div class="final-trains">
+    <div class="explanation-text-box">
+            <h1 class="explanation-text">
+                Here are the trains with the most pips and most dominoes
+                you can build with the dominoes you've provided.
+            </h1>
+    </div>
+
+    <div class="results-box">
+        <body>Most Pips: {{ mostPips }}</body>
+        <br>
+        <body>Longest: {{ longest }}</body>
+    </div>
+</div>
+
+<div class="controls-box">
+    <div class="restart">
+        <li><a href="{{url_for('photo_submit')}}">Restart</a></li>
+    </div>
+    <div class="modify">
+        <li><a href="{{url_for('user_review')}}">Wait! I want to change the dominoes</a></li>
+    </div>
+</div>
+
+{% endblock %}
